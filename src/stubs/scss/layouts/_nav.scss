@@ -1,0 +1,15 @@
+// Fixes the split-second flicker of the title bar on desktop
+// You may need to adjust the breakpoints for your project
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}

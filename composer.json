@@ -1,0 +1,22 @@
+{
+    "name": "zacksmash/laravel-foundation-preset",
+    "description": "Laravel Front-end preset for Foundation CSS Framework",
+    "keywords": ["laravel", "preset", "zurb-foundation", "foundation"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zacksmash\\LaravelPreset\\": "src/"
+        }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Zacksmash\\LaravelPreset\\PresetServiceProvider"
+       ]
+      }
+    }
+
+}

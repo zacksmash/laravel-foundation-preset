@@ -1,0 +1,16 @@
+/** Foundation core */
+@import 'foundation';
+
+/** NPM dependencies */
+// @import 'node_modules/path/to/plugin.scss';
+
+/** App variables/mixins */
+@import 'variables';
+@import 'mixins';
+
+/** App components */
+@import 'components/buttons';
+@import 'components/forms';
+
+/** App Layouts */
+@import 'layouts/nav';

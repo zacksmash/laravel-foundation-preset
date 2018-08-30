@@ -1,0 +1,5 @@
+// Medium grid gutter width
+$medium-gutter-width: map-get($grid-column-gutter, 'medium') / 2;
+
+// Small grid gutter width
+$small-gutter-width: map-get($grid-column-gutter, 'small') / 2;
