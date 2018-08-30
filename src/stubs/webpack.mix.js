@@ -13,7 +13,7 @@ let mix = require('laravel-mix');
 
 // Set project paths
 let localDomain = 'changemeidiot.test';
-let assetsPath  = `resources/assets`;
+let assetsPath  = `resources`;
 let publicPath  = `public`;
 
 mix

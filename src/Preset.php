@@ -58,17 +58,15 @@ class Preset extends BasePreset
 
     protected static function updateScss()
     {
-        $assetsPath = app()->version() >= 5.7 ? '' : 'assets/';
-        (new Filesystem)->deleteDirectory(resource_path($assetsPath.'sass'));
-        (new Filesystem)->copyDirectory(__DIR__.'/stubs/scss', resource_path($assetsPath.'scss'));
+        (new Filesystem)->deleteDirectory(resource_path('sass'));
+        (new Filesystem)->copyDirectory(__DIR__.'/stubs/scss', resource_path('scss'));
     }
 
     protected static function updateJavaScript()
     {
-        $assetsPath = app()->version() >= 5.7 ? '' : 'assets/';
-        copy(__DIR__.'/stubs/js/app.js', resource_path($assetsPath.'js/app.js'));
-        copy(__DIR__.'/stubs/js/bootstrap.js', resource_path($assetsPath.'js/bootstrap.js'));
-        copy(__DIR__.'/stubs/js/foundation.js', resource_path($assetsPath.'js/foundation.js'));
+        copy(__DIR__.'/stubs/js/app.js', resource_path('js/app.js'));
+        copy(__DIR__.'/stubs/js/bootstrap.js', resource_path('js/bootstrap.js'));
+        copy(__DIR__.'/stubs/js/foundation.js', resource_path('js/foundation.js'));
     }
 
     protected static function updateTemplates()
