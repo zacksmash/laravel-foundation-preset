@@ -36,7 +36,7 @@ class Preset extends BasePreset
         copy(__DIR__.'/stubs/gitignore', base_path('.gitignore'));
     }
 
-    protected static function updateGitignore()
+    protected static function updateEditorConfig()
     {
         copy(__DIR__.'/stubs/editorconfig', base_path('.editorconfig'));
     }
