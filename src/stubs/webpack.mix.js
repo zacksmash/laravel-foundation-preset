@@ -36,6 +36,7 @@ mix
   notify: false,
   browser: 'google chrome',
   open: 'external',
+  reloadOnRestart: true,
   injectChanges: true,
   files: [
     `**/*.php`,
