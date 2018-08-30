@@ -72,9 +72,9 @@ class Preset extends BasePreset
     protected static function updateTemplates()
     {
         // remove default welcome page
-        (new Filesystem)->delete(
-            resource_path('views/welcome.blade.php')
-        );
+        // (new Filesystem)->delete(
+        //     resource_path('views/welcome.blade.php')
+        // );
 
         // Copy Zurb Foundation Auth view templates
         (new Filesystem)->copyDirectory(__DIR__.'/stubs/views', resource_path('views'));
