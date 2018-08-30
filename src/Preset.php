@@ -44,11 +44,11 @@ class Preset extends BasePreset
     protected static function updatePackageArray(array $packages)
     {
         return array_merge([
-          'browser-sync': '^2.23.6',
-          'browser-sync-webpack-plugin': '^2.0.1',
+          'browser-sync' => '^2.23.6',
+          'browser-sync-webpack-plugin' => '^2.0.1',
           'foundation-sites' => '^6.4.4-rc1',
           'jquery' => '^3.2',
-          'motion-ui': '^1.2.3',
+          'motion-ui' => '^1.2.3',
         ], Arr::except($packages, [
             'bootstrap',
             'bootstrap-sass',
