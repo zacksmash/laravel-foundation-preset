@@ -1,13 +1,13 @@
 @extends('layouts.auth')
 
 @section('content')
-  <form role="form" method="POST" action="{{ url('/login') }}" data-abide novalidate>
+  <form role="form" method="POST" action="{{ route('login') }}" data-abide novalidate>
     @csrf
 
     <div class="form-group">
       <label for="email" {{ $errors->has('email') ? 'class=is-invalid-label' : '' }}>E-Mail Address</label>
 
-      <input id="email" type="email" {{ $errors->has('email') ? 'class=is-invalid-input' : '' }} name="email" value="{{ old('email') }}" required autofocus>
+      <input id="email" type="email" name="email" {{ $errors->has('email') ? 'class=is-invalid-input' : '' }} value="{{ old('email') }}" required autofocus>
 
       @if ($errors->has('email'))
         <span class="form-error is-visible">{{ $errors->first('email') }}</span>
@@ -25,10 +25,13 @@
     </div>
 
     <div>
-      <label><input type="checkbox" name="remember"> Remember Me</label>
+      <input id="remember" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}><label for="remember">Remember Me</label>
     </div>
 
     <button type="submit" class="button">Login</button>
-    <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+    <br>
+    <small>
+      <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+    </small>
   </form>
 @endsection
