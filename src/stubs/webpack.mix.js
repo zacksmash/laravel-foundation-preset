@@ -48,4 +48,5 @@ mix
 // Setup versioning (cache-busting)
 if (mix.inProduction()) {
   mix.version();
+  mix.babel(`${publicPath}/js/main.js`, `${publicPath}/js/main.js`);
 }
