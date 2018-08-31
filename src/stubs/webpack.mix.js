@@ -12,9 +12,9 @@ const mix = require('laravel-mix');
  */
 
 // Set project paths
-let localDomain = 'changemeidiot.test';
-let assetsPath  = `resources`;
-let publicPath  = `public`;
+const localDomain = 'changemeidiot.test';
+const assetsPath  = `resources`;
+const publicPath  = `public`;
 
 mix
 // Suppress success messages
