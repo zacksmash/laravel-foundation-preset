@@ -34,8 +34,7 @@ mix
   proxy: localDomain,
   host: localDomain,
   notify: false,
-  browser: 'google chrome',
-  open: 'external',
+  open: false,
   reloadOnRestart: true,
   injectChanges: true,
   files: [
