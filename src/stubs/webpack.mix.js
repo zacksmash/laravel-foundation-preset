@@ -1,4 +1,5 @@
-const mix = require('laravel-mix');
+const mix     = require('laravel-mix');
+const webpack = require('webpack');
 
 /*
  |--------------------------------------------------------------------------
@@ -17,6 +18,17 @@ const assetsPath  = `resources`;
 const publicPath  = `public`;
 
 mix
+// Add jQuery globally
+.webpackConfig({
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      'window.jQuery': "jquery"
+    })
+  ]
+})
+
 // Suppress success messages
 .disableSuccessNotifications()
 
