@@ -4,13 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import lodash from 'lodash';
 import './foundation'
-import axios from 'axios';
-
-try {
-    window.$ = window.jQuery = require('jquery');
-} catch (e) {}
+import lodash from 'lodash';
+import axios  from 'axios';
 
 /**
 * We'll load the axios HTTP library which allows us to easily issue requests
