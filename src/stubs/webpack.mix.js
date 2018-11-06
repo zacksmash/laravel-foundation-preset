@@ -47,7 +47,6 @@ mix
   host: localDomain,
   notify: false,
   open: false,
-  reloadOnRestart: true,
   injectChanges: true,
   files: [
     `**/*.php`,
