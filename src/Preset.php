@@ -44,7 +44,7 @@ class Preset extends BasePreset
     protected static function updatePackageArray(array $packages)
     {
         return array_merge([
-          'browser-sync' => '^2.26.3',
+          'browser-sync' => '^2.24.3',
           'browser-sync-webpack-plugin' => '^2.2.2',
           'foundation-sites' => '^6.5.0',
           'jquery' => '^3.2',
