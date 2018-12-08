@@ -1,5 +1,9 @@
-// Medium grid gutter width
-$medium-gutter-width: map-get($grid-column-gutter, 'medium') / 2;
-
-// Small grid gutter width
-$small-gutter-width: map-get($grid-column-gutter, 'small') / 2;
+// Add text and background color classes from $foundation-palette colors
+@each $key, $value in $foundation-palette {
+  .#{$key} {
+    &-bg { background-color: $value !important; }
+    &-bg-hover { background-color: $value !important; }
+    &-text { color: $value !important; }
+    &-text-hover { color: $value !important; }
+  }
+}

@@ -1,5 +1,6 @@
 const mix     = require('laravel-mix');
 const webpack = require('webpack');
+require('laravel-mix-auto-extract');
 
 /*
  |--------------------------------------------------------------------------
@@ -19,15 +20,7 @@ const publicPath  = `public`;
 
 mix
 // Add jQuery globally
-.webpackConfig({
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      'window.jQuery': "jquery"
-    })
-  ]
-})
+.autoload({ jquery: ['$', 'jQuery'] })
 
 // Suppress success messages
 .disableSuccessNotifications()
@@ -39,7 +32,10 @@ mix
 .standaloneSass(`${assetsPath}/scss/app.scss`, `${publicPath}/css`, {
   includedPaths: ['node_modules']
 })
+
+// Utilities
 .sourceMaps()
+.autoExtract()
 
 // Setup BrowserSync
 .browserSync({
