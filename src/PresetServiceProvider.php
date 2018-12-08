@@ -18,11 +18,5 @@ class PresetServiceProvider extends ServiceProvider
             $command->info('Foundation scaffolding installed successfully.');
             $command->comment('Please run "npm install && npm run dev" to compile your fresh scaffolding.');
         });
-
-        PresetCommand::macro('foundation-auth', function ($command) {
-            Preset::install(true);
-            $command->info('Foundation scaffolding with Auth views installed successfully.');
-            $command->comment('Please run "npm install && npm run dev" to compile your fresh scaffolding.');
-        });
     }
 }
