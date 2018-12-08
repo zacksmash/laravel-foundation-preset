@@ -47,7 +47,7 @@ class Preset extends BasePreset
           'browser-sync' => '^2.26.3',
           'browser-sync-webpack-plugin' => '^2.2.2',
           'foundation-sites' => '^6.5.1',
-          'jquery' => '^3.2',
+          'jquery' => '^3.3.1',
           'laravel-mix-auto-extract' => '^1.0.1',
           'motion-ui' => '^2.0.3',
         ], Arr::except($packages, [
