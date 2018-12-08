@@ -67,7 +67,6 @@ class Preset extends BasePreset
     {
         copy(__DIR__.'/stubs/js/app.js', resource_path('js/app.js'));
         copy(__DIR__.'/stubs/js/bootstrap.js', resource_path('js/bootstrap.js'));
-        copy(__DIR__.'/stubs/js/foundation.js', resource_path('js/foundation.js'));
     }
 
     protected static function updateTemplates()
