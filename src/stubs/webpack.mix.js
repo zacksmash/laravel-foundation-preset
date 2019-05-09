@@ -1,5 +1,4 @@
 const mix     = require('laravel-mix');
-const webpack = require('webpack');
 require('laravel-mix-auto-extract');
 
 /*
@@ -39,7 +38,7 @@ mix
 
 // Setup BrowserSync
 .browserSync({
-  proxy: localDomain,
+  proxy: 'http://' + localDomain,
   host: localDomain,
   notify: false,
   open: false,
@@ -48,7 +47,11 @@ mix
     `**/*.php`,
     `${publicPath}/**/*.js`,
     `${publicPath}/**/*.css`
-  ]
+  ],
+  // https: {
+  //   key: '/Users/YOUR_COMPUTER/.config/valet/Certificates/YOUR_SITE.test.key',
+  //   cert: '/Users/YOUR_COMPUTER/.config/valet/Certificates/YOUR_SITE.test.crt'
+  // }
 })
 
 // Setup versioning (cache-busting)

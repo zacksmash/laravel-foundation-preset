@@ -8,8 +8,6 @@ import 'foundation-sites';
 import lodash from 'lodash';
 import axios  from 'axios';
 
-window.$ = window.jQuery = $;
-
 $(document).foundation();
 
 /**
